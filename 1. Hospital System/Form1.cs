@@ -19,7 +19,7 @@ namespace _1.Hospital_System
 
         private void buttonDisplayPatient_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 Patient patient = new Patient(textBoxName.Text, Convert.ToInt32(numericUpDownAge.Value), textBoxDisease.Text);
 
@@ -32,5 +32,6 @@ namespace _1.Hospital_System
                 MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
     }
 }
