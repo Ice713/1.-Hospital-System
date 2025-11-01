@@ -19,7 +19,11 @@ namespace _1.Hospital_System
 
         private void buttonDisplayPatient_Click(object sender, EventArgs e)
         {
+            Patient patient = new Patient("Mary", 30, "Flu");
 
+            string patientDetails = patient.GetDetails();
+
+            MessageBox.Show(patientDetails, "Patient Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
