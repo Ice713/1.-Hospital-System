@@ -21,6 +21,12 @@ namespace _1.Hospital_System
         {
             try
             {
+                if (string.IsNullOrWhiteSpace(textBoxName.Text) ||
+                    string.IsNullOrWhiteSpace(textBoxDisease.Text))
+                {
+                    MessageBox.Show("Please fill in all fields.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 Patient patient = new Patient(textBoxName.Text, Convert.ToInt32(numericUpDownAge.Value), textBoxDisease.Text);
 
                 string patientDetails = patient.GetDetails();
