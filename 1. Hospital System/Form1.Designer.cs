@@ -108,6 +108,7 @@
             this.buttonDisplayPatient.TabIndex = 7;
             this.buttonDisplayPatient.Text = "Display Patient Details";
             this.buttonDisplayPatient.UseVisualStyleBackColor = false;
+            this.buttonDisplayPatient.Click += new System.EventHandler(this.buttonDisplayPatient_Click);
             // 
             // Form1
             // 

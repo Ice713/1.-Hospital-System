@@ -16,5 +16,10 @@ namespace _1.Hospital_System
         {
             InitializeComponent();
         }
+
+        private void buttonDisplayPatient_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
