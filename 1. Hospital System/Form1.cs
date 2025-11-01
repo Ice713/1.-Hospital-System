@@ -19,11 +19,18 @@ namespace _1.Hospital_System
 
         private void buttonDisplayPatient_Click(object sender, EventArgs e)
         {
-            Patient patient = new Patient("Mary", 30, "Flu");
+            try 
+            {
+                Patient patient = new Patient(textBoxName.Text, Convert.ToInt32(numericUpDownAge.Value), textBoxDisease.Text);
 
-            string patientDetails = patient.GetDetails();
+                string patientDetails = patient.GetDetails();
 
-            MessageBox.Show(patientDetails, "Patient Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+                MessageBox.Show(patientDetails, "Patient Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
     }
 }
